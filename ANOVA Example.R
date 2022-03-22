@@ -10,12 +10,10 @@
 ###################################################################
 
 
-# To Clear working environment
-rm(list=ls())
-graphics.off()
-
 # load packages
-library(dplyr)
+library(dplyr) # pretty much always load for filtering and manipulating data
+library(Rmisc) # helpful function (summarySE) for summarizing data
+
 
 # Load made up data --------------------------------------------------------
 
@@ -50,6 +48,10 @@ shapiro.test(class_3$Percent_Grade)
 # ANOVA assumes equal variances of groups
 # p value must be > 0.05 to pass
 bartlett.test(data$Percent_Grade, data$Class)
+
+# helpful summary of data
+Summary <- summarySE(data, measurevar = "Percent_Grade", groupvars = "Class")
+Summary
 
 #One-way ANOVA
 OW_model <- aov(Percent_Grade ~  Class , data = data)
