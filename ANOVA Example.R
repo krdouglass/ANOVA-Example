@@ -50,8 +50,8 @@ shapiro.test(class_3$Percent_Grade)
 bartlett.test(data$Percent_Grade, data$Class)
 
 # helpful summary of data
-Summary <- summarySE(data, measurevar = "Percent_Grade", groupvars = "Class")
-Summary
+data_summary <- summarySE(data, measurevar = "Percent_Grade", groupvars = "Class")
+data_summary
 
 #One-way ANOVA
 OW_model <- aov(Percent_Grade ~  Class , data = data)
@@ -77,6 +77,11 @@ par(mfrow=c(1,1))
 # a perfectly-homoscedastic model and the actual residuals of your model, 
 # so the closer to a slope of 1 this is the better. 
 # This Q-Q plot is very close, with only a bit of deviation.
+
+# summarize two-way data
+# helpful summary of data
+tw_data_summary <- summarySE(data, measurevar = "Percent_Grade", groupvars = c("Class", "Sex"))
+tw_data_summary
 
 #Two-way ANOVA
 TW_model <- aov(Percent_Grade ~  Class + Sex , data = data)
