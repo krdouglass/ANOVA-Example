@@ -1,0 +1,15 @@
+# ANOVA Example
+The purpose of the R script is to demonstrate an Analysis of Variance (ANOVA) 
+statistical analysis. This was made mostly for my own reference and as a way 
+to practice, so it is far from perfect or comprehensive, but I will share it 
+here for others who may find it helpful.
+
+ANOVA is a statistical test for estimating how a quantitative dependent variable
+changes according to the levels of one or more categorical independent variables. 
+ANOVA tests whether there is a difference in means of the groups at each level 
+of the independent variable.
+
+The null hypothesis (H0) of the ANOVA is no difference in means, 
+and the alternate hypothesis (Ha) is that the means are different from one another.
+
+Scripts by: Kim Fake
